@@ -1,0 +1,444 @@
+:root {
+    --facebook-bg: #255A9B;
+    --linkedin-bg: #0076B6;
+    --body-bg: #EFF6FF;
+    --body-text-color: #2A4A5C;
+    --main-border-color: #2A4A5C;
+    --or-pseudo-color: #E5E5E5;
+    --border-bg: #EFEFEF;
+    --border-bg-hover: #009AFF;
+    --input-bg: #E6E6E6;
+    --input--over-bg: #009CFC;
+    --submit-bg: #009BFF;
+    --grid-gap-y-mobile: 20px;
+    --grid-gap-y: 40px;
+    --grid-gap: 40px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+}
+
+a {
+    color: var(--border-bg-hover);
+    border-bottom: 1px solid var(--border-bg-hover);
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-text-color);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 140%;
+    direction: ltr;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+section.main {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    overflow: hidden;
+}
+
+section.main > div:first-child {
+    flex: 0 0 400px;
+    position: relative;
+}
+
+section.main > div:first-child > img.logo {
+    object-fit: cover;
+    max-height: 400px;
+    width: 100%;
+}
+
+section.main > div:first-child > img.text-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+}
+
+section.main > div:last-child {
+    padding: 40px 20px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 16px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.social-buttons > button {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    font-weight: 300;
+    flex: 1 1 auto;
+    transition-duration: 400ms;
+}
+
+.social-buttons > button:first-child {
+    background-color: var(--facebook-bg);
+}
+
+.social-buttons > button > p:first-child {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.social-buttons > button:last-child {
+    background-color: var(--linkedin-bg);
+}
+
+.social-buttons > button:hover,
+.social-buttons > button:active {
+    background-color: black;
+    cursor: pointer;
+}
+
+main > div:last-child > p {
+    text-transform: uppercase;
+}
+
+.spacer {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px auto;
+    position: relative;
+    width: 10%;
+}
+
+.spacer:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: var(--or-pseudo-color);
+    height: 1px;
+    width: 450%;
+    top: 50%;
+    left: -450%;
+}
+
+.spacer:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: var(--or-pseudo-color);
+    height: 1px;
+    width: 450%;
+    top: 50%;
+    right: -450%;
+}
+
+form.registration {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--grid-gap-y-mobile) var(--grid-gap);
+}
+
+form.registration > label.text {
+    position: relative;
+}
+
+form.registration > label.text > input {
+    height: 55px;
+    padding: 20px 0 0 10px;
+    border: var(--border-bg) 1px solid;
+    transition-duration: 300ms;
+    width: 100%;
+}
+
+form.registration label.text span {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    font-size: 11px;
+}
+
+form.registration > label > input:hover,
+form.registration > label > input:focus {
+    border-left-color: var(--border-bg-hover);
+}
+
+form.registration > div.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form.registration > div.content {
+    grid-column: 1/-1;
+}
+
+form.registration > div.content > p:first-child {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+form.registration > div.content > p:last-child {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+form.registration > fieldset {
+    padding: 0 10px 0 0;
+    grid-column: 1/-1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+fieldset span {
+    position: relative;
+    padding-left: 16px;
+}
+
+fieldset label {
+    cursor: pointer;
+}
+
+fieldset span:before {
+    content: '';
+    position: absolute;
+    border: 1px solid var(--input-bg);
+    height: 8px;
+    width: 8px;
+    display: block;
+    border-radius: 50%;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: border-color 300ms linear;
+    -ms-transition: border-color 300ms linear;
+    transition: border-color 300ms linear;
+}
+
+fieldset span:after {
+    content: 'i';
+    font-weight: 300;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -12px;
+    margin: auto 0;
+    color: var(--input-bg);
+    border: 1px solid var(--input-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+}
+
+input[type="radio"]:checked ~ span:before {
+    border: 3px solid var(--border-bg-hover);
+    height: 6px;
+    width: 6px;
+}
+
+form.registration p.info {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 300;
+    font-size: 14px;
+    display: block;
+    grid-column: 1/-1;
+}
+
+form.registration div.terms {
+    grid-column: 1/-1;
+}
+
+form.registration div.terms span {
+    font-weight: 300;
+    font-size: 14px;
+    padding: 0 0 0 20px;
+    position: relative;
+}
+
+form.registration div.terms label {
+    cursor: pointer;
+}
+
+form.registration div.terms span:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--input-bg);
+}
+
+form.registration div.terms input {
+    display: none;
+}
+
+form.registration div.terms span:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    transition-duration: 300ms;
+}
+
+form.registration div.terms input:checked ~ span:after {
+    background: var(--border-bg-hover);
+}
+
+form.registration button[type="submit"] {
+    background-color: var(--submit-bg);
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+form.registration button[type="submit"]:hover {
+    background-color: #000;
+}
+
+@media (min-width: 550px) {
+    .social-buttons {
+        flex-direction: row;
+        gap: var(--grid-gap);
+    }
+
+    form.registration {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section.main > div:last-child {
+        padding: 60px
+    }
+
+    section.main > div:first-child > img.text-logo {
+        top: 60px;
+        left: 60px;
+    }
+}
+
+@media (min-width: 768px) {
+    .spacer {
+        margin: 40px auto;
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        padding: 100px 0;
+    }
+    section.main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        max-height: 1000px;
+    }
+
+    section.main > div:first-child > img.logo {
+        max-height: none;
+        height: 100%;
+    }
+
+    section.main > div:last-child {
+        padding: 40px 20px;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form.registration > label {
+        grid-column: 1/-1;
+    }
+
+    form.registration p.info {
+        grid-column: auto;
+    }
+
+    section.main > div:first-child > img.text-logo {
+        top: 40px;
+        left: 20px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 1200px) {
+    section.main {
+        max-width: 1400px;
+    }
+
+    section.main > div:last-child {
+        padding: 60px;
+    }
+
+    .social-buttons {
+        flex-direction: row;
+        gap: var(--grid-gap);
+    }
+
+    form.registration > label {
+        grid-column: auto;
+    }
+
+    form.registration {
+        grid-gap: var(--grid-gap-y) var(--grid-gap);
+    }
+
+    form.registration p.info {
+        margin-top: -30px;
+    }
+
+    section.main > div:first-child > img.text-logo {
+        top: 60px;
+        left: 60px;
+    }
+}

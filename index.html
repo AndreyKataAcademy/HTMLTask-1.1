@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Task</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="./src/fonts.css">
+</head>
+<body>
+<main>
+    <section class="main">
+        <div>
+            <img src="./src/img/bg.jpg" class="logo" alt="iintoo">
+            <img src="./src/img/logo.svg" class="text-logo" alt="logo">
+        </div>
+        <div>
+            <div>
+                <h1>Get iintoo today</h1>
+                <h2>There is no charge or obligation upon registration</h2>
+
+                <div class="social-buttons">
+                    <button>
+                        <p>f</p>
+                        <p>Register with Facebook</p>
+                    </button>
+                    <button>
+                        <p>in</p>
+                        <p>Register with LinkedIn</p>
+                    </button>
+                </div>
+
+                <p class="spacer">Or</p>
+
+                <form action="#" class="registration">
+                    <label for="email" class="text">
+                        <span>Email</span>
+                        <input name="email" id="email" type="text">
+                    </label>
+
+                    <label for="phone" class="text">
+                        <span>Phone</span>
+                        <input name="phone" id="phone" type="text">
+                    </label>
+
+                    <div class="content">
+                        <p>What type of investor are you?</p>
+                        <p>Select the type of investor you are below</p>
+                    </div>
+
+                    <fieldset>
+                        <label>
+                            <input type="radio" name="level" value="individual" checked>
+                            <span>Individual</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="level" value="business">
+                            <span>Business</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="level" value="ira">
+                            <span>IRA</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="level" value="trust">
+                            <span>Trust</span>
+                        </label>
+                    </fieldset>
+
+                    <p class="info">
+                        I am a natural person investing on my own begalf as a sole owner, joint tenat, or tenant in
+                        common.
+                    </p>
+
+                    <div class="terms">
+                        <label>
+                            <input type="checkbox" name="agree" value="true" required>
+                            <span>I agree to the terms and receiving notifications from iinto <a href="?"">View full terms</a>
+                                .</span>
+                        </label>
+                    </div>
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    document.querySelector('a').addEventListener('click', (event) => event.preventDefault());
+    document.querySelector('a').addEventListener('click', (event) => event.preventDefault());
+</script>
+</body>
+</html>
